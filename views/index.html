@@ -1,0 +1,47 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: http://mozilla.github.io/nunjucks/ -->
+<!-- jade: http://jade-lang.com/ -->
+<!-- haml: http://haml.info/tutorial.html -->
+<!-- hbs(handlebars): http://handlebarsjs.com/expressions.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Gomix!</title>
+    <meta name="description" content="A cool thing made with Gomix">
+    <link id="favicon" rel="icon" href="https://gomix.com/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+   <h1>Todo List</h1>
+   <div>
+     <button onclick="handlers.toggleAll()">Toggle All</button>
+   </div>
+   <div>
+     <button onclick="handlers.add()">Add</button>
+     <input id="addInputText" type="text" placeholder="add todo item">
+   </div>
+   <div>
+     <button onclick="handlers.change()">Change Todo</button>
+     <input id="changePos" type="number" placeholder="enter a todo position">
+     <input id="changeText" type="text" placeholder="enter your change">
+   </div>
+   <div>
+     <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+     <input id="togglePos" type="number" placeholder="enter a todo position to complete">
+   </div>
+   <div>
+     <ul></ul>
+   </div>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="/client.js"></script>
+
+  </body>
+</html>
